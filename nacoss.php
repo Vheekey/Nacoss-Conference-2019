@@ -19,13 +19,15 @@
         <script src="js/mdb.js"></script>
         <script src="js/mdb.min.js"></script>
         <script src="js/popper.min.js"></script>
+    <title>Software Exhibition</title>
+
     </head>
     
     <style>
 
         
         .firstRow{
-            background-image: url('images/firstRow.png');
+            background-image: url('[webpath]images/firstRow.png');
             color:white;
             font-family: 'Nunito', sans-serif;
             padding-bottom: 17%;
@@ -99,7 +101,7 @@
         }
 
         #thirdRow{
-            background-image: url('images/third.png');
+            background-image: url('[webpath]images/third.png');
             color:white;
             font-family: 'Nunito', sans-serif;
             scroll-behavior: smooth;
@@ -131,7 +133,7 @@
         }
 
         #fifthRow{
-            background-image: url('images/second.png');
+            background-image: url('[webpath]images/second.png');
             color:white;
             font-family: 'Nunito', sans-serif;
             /* font-family: 'Open Sans', sans-serif; */
@@ -160,9 +162,15 @@
             z-index:1; 
             position:fixed;
             text-align: center;
-            padding-left: 2%;
-            padding-right:2%;
+            bottom: 1px;
+            right: 5px;
+           
+            
         }
+
+        #hidden_div {
+                display: none;
+            }
 
         /* .nav-item{
             background-color: solid black !important;
@@ -170,38 +178,65 @@
         } */
 
         @media screen and (min-width: 0px) and (max-width: 900px) {
-            #mobileNav { position: absolute; z-index: 1; }  /* show it on small screens */
+            #mobileNav { position: absolute; z-index: 500;}  /* show it on small screens */
             #pcNav { display: none; }  /* show it on small screens */
             .navbar-toggler {  display: flex; }
             #home{ padding-top: 2%;}
             #title{ padding-top: 15%;}
             #mobileNav .navbar{ z-index: 1; position: fixed; }
             /* .nav-item{ margin-top: -20%; } */
-            .nav-item{ margin-top: 0px; }
+            /* .nav-item{ margin-top: 0px; } */
             #timing{
             z-index:1; 
             position:fixed;
             text-align: center;
-            /* padding-left: 2%;
-            padding-right:2%; */
+            bottom: 3px;
+            right: 5px;
             width:100%;
             /* height:10px; */
         }
+        /* .droppy li a{
+            line-height: 3px;
+            font-size: .8rem;
+            height: 36px;        
+            } */
+
+            .scrolling {
+            white-space: nowrap;
+            overflow-x: auto; 
+            -webkit-overflow-scrolling: touch;
+            }
+
+            #hidden_div {
+                display: none;
+            }
+
+            .scrollable-menu {
+                height: auto;
+                max-height: 500px;
+                overflow-x: hidden;
+            }
+                    /* #navbarSupportedContent15 li{
+            height: 80%;
+            } */
         }
-        @media screen and (min-width: 901px) and (max-width: 1000px) {
-            .container #title { padding-top: 25%; }
-            #prizes { padding-top: 10%; }
-            #how-to-participate { padding-top: 10%; }
-            .nav-item{ margin-top: 0px; }
-            #timing{
-            z-index:1; 
-            position:fixed;
-            text-align: center;
-            /* padding-left: 2%;
-            padding-right:2%; */
-            /* width:100%; */
-            /* height:10px; */
-        }
+        
+            @media screen and (min-width: 901px) and (max-width: 1000px) {
+                .container #title { padding-top: 25%; }
+                /* #pcNav { display: none; } */
+                #prizes { padding-top: 10%; }
+                #how-to-participate { padding-top: 10%; }
+                .nav-item{ margin-top: 0px; }
+                #timing{
+                z-index:1; 
+                position:fixed;
+                text-align: center;
+                padding-left: 2%;
+                padding-right:2%;
+                /* width:100%; */
+                /* height:10px; */
+            }
+       
         }
 
         @media screen and (min-width: 901px) and (max-width: 1024px) {
@@ -216,8 +251,8 @@
     <body>
         <div id="home" class="colo firstRow">
             <div id="pcNav" class="container-fluid">
-                <nav class="navbar nav-dark bg-dark text-white navbar-expand-lg fixed-top">
-                        <a class="navbar-brand" href="https://www.voguepay.com"><img src="images/voguepayLogo-white.png" width="50%"></a>
+                <nav class="navbar nav-dark bg-dark text-white navbar-expand-lg fixed-top" class=".d-md-none .d-lg-block">
+                        <a class="navbar-brand" href="https://www.voguepay.com"><img src="[webpath]images/voguepayLogo-white.png" width="50%"></a>
                         <div class="my-2 my-lg-0 ml-auto ">
                             <a href="#home" class="my-2 my-sm-0 ml-3 colo scroll">Home</a>
                             <a href="#prizes" class="my-2 my-sm-0 ml-5 colo scroll">Prizes</a>
@@ -225,14 +260,14 @@
                             <a href="#how-to-participate" class="my-2 my-sm-0 ml-5 colo scroll">How to participate</a>
                             <a href="#benefits" class="my-2 my-sm-0 ml-5 colo scroll">Benefits</a>
                             <a href="#contact" class="my-2 my-sm-0 ml-5 colo scroll">Contact</a>
-                            <a data-toggle="modal" data-target="#registrationType" class="my-2 my-sm-0 ml-5 colo scroll" id="rcorners2">Sign Up</a>
+                            <a data-toggle="modal" data-target="#fullHeightModalRight" class="my-2 my-sm-0 ml-5 colo scroll" id="rcorners2">Register</a>
                         </div>
                 </nav>
             </div>
 
             <div id="mobileNav">
-                <nav class="navbar navbar-dark bg-dark navbar-1 dark " >
-                    <!-- <a class="navbar-brand" href="https://www.voguepay.com"><img src="images/voguepayLogo-white.png" width="50%"></a> -->
+                <nav class="navbar navbar-dark bg-dark navbar-1 dark scrolling" >
+                    <!-- <a class="navbar-brand" href="https://www.voguepay.com"><img src="[webpath]images/voguepayLogo-white.png" width="50%"></a> -->
 
                         <!-- Collapse button -->
                     <button class="navbar-toggler" type="button"  data-toggle="collapse" data-target="#navbarSupportedContent15"
@@ -242,7 +277,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent15">
                 
                     <!-- Links -->
-                    <ul class="navbar-nav mr-auto droppy" style="background-color: black;" >
+                    <ul class="navbar-nav mr-auto droppy scrollable-menu" role="menu" id="droppy" style="background-color: black;" >
                     <li class="nav-item active">
                         <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -262,7 +297,7 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="modal" data-target="#registrationType" >Sign Up</a>
+                        <a class="nav-link" data-toggle="modal" data-target="#fullHeightModalRight" >Register</a>
                     </li>
                     </ul>
                     <!-- Links -->
@@ -273,7 +308,7 @@
             </div>
             
             <div class="container" style="">
-                <div id="title">
+                    <div id="title">
                     <h1 style="font-size: 2.5em; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: #5B86E5;" class="capitals">
                         CONTEMPORARY TECHNOLOGY ECOSYSTEM: </h1>
                 </div>
@@ -299,25 +334,19 @@
 
                    
                 <div class="col-sm-12" style="text-align: center">
-                    <a data-toggle="modal" data-target="#registrationType" style="color:white;"><span id="signing" >Sign Up</span></a>
+                    <a data-toggle="modal" data-target="#fullHeightModalRight" style="color:white;"><span id="signing" >Register</span></a>
                 </div>
 
                 <div class="row">
-                    <div class="col-md-4 col-sm-12 offset-md-7" id="timing" style="font-size: 150%; font-weight:900; height:100%; text-shadow: 1px 0 #888888; letter-spacing:1px; color: white;  background-color: black;" class="capitals"> </div>
+                    <!-- <div class="col-md-4 col-sm-12 offset-md-7 mr-5" id="timing" style="font-size: 180%; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: white;  background-color: black;" class="capitals"> </div> -->
+                    <div id="timing" style="font-size: 180%; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: white;  background-color: black; padding:10px;" class="capitals"> </div>
                 </div>
-               
-
-                <!-- <div class="row d-flex justify-content-center mx-auto" style="padding-bottom: 17%;">
-                    <span id="" class="col-md-4"></span>
-                    <a data-toggle="modal" data-target="#registrationType" style="color:white;"><span id="signing" class="col-md-3 mx-auto pl-5">Sign Up</span></a>
-                    <span id="" class="col-md-5"></span>
-                </div> -->
             </div>
         </div>
         <div id="prizes" class="secondRow animated fadeIn">
             <div class="container justify-content-center" id="">
                 <div style="font-size: 2.5em; font-weight:900; text-shadow: 2px 0 #888888; letter-spacing:1px; padding-bottom: 2%;" class="text-center text-dark"> 
-                    Why Sign Up? 
+                    Why Register? 
                 </div>
 
                 <div class="text-center text-dark prow" >
@@ -330,7 +359,7 @@
                         <span class="text-center text-dark prow" style="margin-bottom: 1%"> <h2> 2nd Prize </h2> </span>
                         <div class="card mx-auto" style="width:80%;" >
                                 <div class="card-body">
-                            <img class="img-fuid mx-auto d-block" src="images/second-prize.png" alt="second prize" width="150"  >
+                            <img class="img-fuid mx-auto d-block" src="[webpath]images/second-prize.png" alt="second prize" width="150"  >
                             <h2 class="card-title prow">N75,000</h2>
                             
                                 
@@ -342,7 +371,7 @@
                             <span class="text-center text-dark prow" style="margin-bottom: 1%"> <h2> 1st Prize </h2> </span>
                             <div class="card mx-auto" style="width:95%;" >
                                     <div class="card-body">
-                                <img class="img-fuid mx-auto d-block" src="images/first-prize.png" alt="first prize" width="100%"  >
+                                <img class="img-fuid mx-auto d-block" src="[webpath]images/first-prize.png" alt="first prize" width="100%"  >
                                 <h2 class="card-title prow">N100,000</h2>
                                 <span style="line-height: 2em;"> with Startup <br> concept and <br> investment possibility</span>                                    
                                 </div>
@@ -353,7 +382,7 @@
                             <span class="text-center text-dark prow" style="margin-bottom: 1%"> <h2> 3rd Prize </h2> </span>
                             <div class="card mx-auto" style="width:80%;" >
                                     <div class="card-body">
-                                <img class="img-fuid mx-auto d-block" src="images/third-prize.png" alt="third prize" width="150"  >
+                                <img class="img-fuid mx-auto d-block" src="[webpath]images/third-prize.png" alt="third prize" width="150"  >
                                 <h2 class="card-title prow">N50,000</h2>
                                                                  
                                 </div>
@@ -379,21 +408,21 @@
                     </div>
                 <div class="row text-center justify-content-center" >
                     <div class="col-md-4 mx-auto">
-                        <img src="images/Problem-Identity-Icon.png" alt="identify problem"/>
+                        <img src="[webpath]images/Problem-Identity-Icon.png" alt="identify problem"/>
                         <p style="margin-top:5%; margin-bottom: 7%">
                             <span style="font-weight: 900; font-size: 25px;"> <strong> Problem <br> Identity </strong></span>
                         </p>
                         <p> <span style="line-height: 1.5em; font-size: 20px;"> State the problem you <br> want to solve </span></p>
                     </div>
                     <div class="col-md-4 mx-auto">
-                        <img src="images/Research-Methodology-Icon.png" alt="Research Methodology"/>
+                        <img src="[webpath]images/Research-Methodology-Icon.png" alt="Research Methodology"/>
                         <p style="margin-top:5%; margin-bottom: 7%">
                             <span style="font-weight: 900; font-size: 25px;"> <strong> The <br> Methodology </strong></span>
                         </p>
                         <p> <span style="line-height: 1.5em; font-size: 20px;"> Show the approach you <br> are using to solve the <br> problem </span></p>
                     </div>
                     <div class="col-md-4 mx-auto">
-                        <img src="images//Revenue-Generation-Icon.png" alt="Revenue Generation"/>
+                        <img src="[webpath]images//Revenue-Generation-Icon.png" alt="Revenue Generation"/>
                         <p style="margin-top:5%; margin-bottom: 7%">
                             <span style="font-weight: 900; font-size: 25px;"> <strong> Revenue <br> Generation </strong></span>
                         </p>
@@ -439,9 +468,9 @@
             <div class="row text-center" >
                 <div class="col-md-4"></div>
                 <div class="col-md-4">
-                        <img src="images/Voguepay-homeB.png" class="img-fluid" alt="voguepay logo" width="50%">
+                        <a href="https://www.voguepay.com"> <img src="[webpath]images/Voguepay-homeB.png" class="img-fluid" alt="voguepay logo" width="50%"> </a> 
                         <span class="hidden-xs ml-2 mr-4" style="border-right:2px solid gray; height:40%; position: absolute;"></span>
-                        <img src="images/estore-logo.png" class="img-fluid" alt="estore logo" width="30%" style="margin-left: 7%;">
+                        <a href="https://www.estoresms.com"> <img src="[webpath]images/estore-logo.png" class="img-fluid" alt="estore logo" width="30%" style="margin-left: 7%;"> </a>
                         <p></p>
                         <span style="line-height: 1.5em; font-size: 1.2em; margin-top: 10%;">
                             33A, Abba Johnson Crescent, Akora Estate, <br>
@@ -456,63 +485,9 @@
 
 
 
-        <div class="container">
-            <!-- Choose Registration Type Modal -->
-            <div class="modal fade" id="registrationType" tabindex="-1" role="dialog" aria-labelledby="regLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content justify-content-center text-center">
-                <div class="modal-header">
-                <h4 class="modal-title w-100 capitals text-primary" id="regLabel" style="font-size: 1.5em; font-weight:bold;">Software Exhibition Hack 2019</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body" style="font-family: 'Nunito', sans-serif;">
-                    <h4 style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%;"> Choose Registration type </h4> 
-                    <p>
-                        <button class="btn btn-lg" data-toggle="modal" data-target="#fullHeightModalRight">Individual</button>
-                        <button class="btn btn-lg btn-primary" data-toggle="modal" data-target="#teamMpdal">Team</button>
-                    </p>
-                </div>
-                <div class="modal-footer">
-                
-                </div>
-            </div>
-            </div>
-            </div>
-            <!-- closing -->
+        <div class="container">          
 
             
-
-            <!-- Team Modal -->
-            <div class="modal fade" id="teamMpdal" tabindex="-1" role="dialog" aria-labelledby="teamLab"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-            <div class="modal-content justify-content-center text-center mxauto ml-2 mr-2 pl-5 pr-5">
-                <div class="modal-header">
-                <h4 class="modal-title w-100 capitals text-primary" id="teamLab" style="font-size: 1.5em; font-weight:bold;">Create A Team</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                </div>
-                <div class="modal-body" style="font-family: 'Nunito', sans-serif;">
-                    <h4 style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%;"> Team Name </h4> 
-                    <form action="" method="post">
-                        <div class="md-form">
-                            <input type="text" id="teamName" class="form-control validate" placeholder="Input Team Name" required>
-                        </div>
-                        <input type="submit" value="Create" class="btn btn-lg btn-dark" name=createTeam>
-                    </form>
-                    Already in team? <a id="teamSign" data-toggle="modal" data-target="#fullHeightModalRight" class="text-primary" id="rcorners2">Sign Up here</a>
-                </div>
-                <div class="modal-footer">
-                
-                </div>
-            </div>
-            </div>
-            </div>
-            <!-- closing -->
 
             <!-- Individual Modal -->
             <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -530,16 +505,26 @@
                     <div class="modal-body" style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%; font-family: 'Nunito', sans-serif;">
                         <form action="" method="post">
                             <div class="row">
-                                <div class="col-md-2"> <label for="">Team Name</label> </div>
-                                <div class="col-md-10">
-                                        <input type="text" name="teamName" id="teamName" class="form-control validate" placeholder="Team Name (if you are part of a team else type None)" value="None">     
-                                </div>
+                                <div class="col-md-10"> 
+                                    <label for="">Registration Type</label>
+                                    <div class="md-form mb-5">
+                                        <select class="browser-default custom-select" name="RegType" onchange="showDiv('hidden_div', this);" required>
+                                            <option value="Individual">Individual</option>
+                                            <option value="Team">Team </option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-2"></div>
                             </div>
-                                <!-- <label for="">Team Name</label> -->
-                                <!-- <div class="md-form mb-5">
-                                    <i class="fa fa-users prefix grey-text"></i>
-                                    <input type="text" id="teamName" class="form-control validate" placeholder="Team Name (if you are part of a team)" value="None">
-                            </div> -->
+                                <div id="hidden_div" class="row">
+                                    <div class="col-md-8">
+                                                <div class="md-form mb-5">
+                                                    <i class="fa fa-users prefix grey-text"></i>
+                                                    <input type="text" name="teamName" id="teamName" class="form-control validate" placeholder="Enter Team Name" style="text-transform:uppercase" value="<?php if(isset($_SESSION['teamName'])){ echo $_SESSION['teamName']; }?>">
+                                                </div>
+                                        </div>
+                                        <div class="col-md-4"> <span> or  <button type="button" class="btn btn-sm btn-dark" data-toggle="modal" data-target="#teamMpdal">Create Team</button> </span> </div>
+                                </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="md-form mb-5">
@@ -647,7 +632,7 @@
                                 <div class="col-md-4">
                                     <div class="md-form mb-5">
                                         <i class="fa fa-link prefix grey-text"></i>
-                                        <input type="text" id="paLink" name="paLink" class="form-control validate" placeholder="Useful link if any">
+                                        <input type="url" id="paLink" name="paLink" class="form-control validate" placeholder="Useful link if any">
                                     </div>
                                 </div>
                             </div>
@@ -682,9 +667,89 @@
                 </div>
                 </div>
             <!-- Full Height Modal Right -->
+
+            <!-- Team Modal -->
+            <div class="modal fade" id="teamMpdal" tabindex="-1" role="dialog" aria-labelledby="teamLab"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content justify-content-center text-center mxauto ml-2 mr-2 pl-5 pr-5">
+                <div class="modal-header">
+                <h4 class="modal-title w-100 capitals text-primary" id="teamLab" style="font-size: 1.5em; font-weight:bold;">Create A Team</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body" style="font-family: 'Nunito', sans-serif;">
+                    <h4 style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%;"> Team Name </h4> 
+                    <form action="" method="post">
+                        <div class="md-form">
+                            <input type="text" id="teamName" name="teamName" class="form-control validate" placeholder="Input Team Name" style="text-transform:uppercase" required>
+                        </div>
+                        <input type="submit" value="Create" class="btn btn-lg btn-dark" name=createTeam>
+                    </form>
+                    <!-- Already in team? <a id="teamSign" data-toggle="modal" data-target="#fullHeightModalRight" class="text-primary" id="rcorners2">Register here</a> -->
+                </div>
+                <div class="modal-footer">
+                
+                </div>
+            </div>
+            </div>
+            </div>
+            <!-- closing -->
+
+            <!-- Success Modal -->
+            <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="regLabel"
+            aria-hidden="true" >
+            <div class="modal-dialog" role="document" >
+            <div class="modal-content justify-content-center text-center" style="background: #8bc34a;">
+               
+                <div class="modal-body" style="font-family: 'Nunito', sans-serif; background: #8bc34a; color: white; line-height: 1.5em; font-size: 1.2em;">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    <p>
+                        <?php echo $successMessage; ?>                    
+                    </p>
+                </div>
+       
+            </div>
+            </div>
+            </div>
+            <!-- closing -->
+
+            <!-- Failure Modal -->
+            <div class="modal fade" id="failureModal" tabindex="-1" role="dialog" aria-labelledby="regLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content justify-content-center text-center" style="background: #f44336; color: white; line-height: 1.5em; font-size: 1.2em;">
+ 
+                <div class="modal-body" style="font-family: 'Nunito', sans-serif; background: #f44336; color: white;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    <p>
+                        <?php echo $failureMessage; ?>                    
+                    </p>
+                </div>
+            </div>
+            </div>
+            </div>
+            <!-- closing -->
             
         </div>
 
+    <?php if(isset($successMessage)){
+    ?>
+      <script> $('#successModal').modal('show'); </script> 
+    <?php 
+      } 
+    
+    if(isset($failureMessage)){
+    ?>
+      <script> $('#failureModal').modal('show'); </script> 
+    <?php } ?>
+ 
+        
         <script>
             $(document).ready(function(){
                 let scroll_link = $('.scroll');
@@ -701,17 +766,19 @@
                     return false;	
                 });
 
-                // $("#teamSign").click(function(){
-                //     $('#teamMpdal').modal('hide');
-                //     $('#fullHeightModalRight').modal('show');
-                // });
-
                 $(document).click(function(e) {
                     if (!$(e.target).is('.droppy')) {
                         $('.collapse').collapse('hide');	    
                     }
                 });
+
             });
+
+
+            function showDiv(divId, element)
+                {
+                    document.getElementById(divId).style.display = element.value == 'Team' ? 'block' : 'none';
+                }
 
                 window.onload = countDate("2019-08-28 00:00:00", "timing");
                 function countDate(dateq, id) {
@@ -727,23 +794,12 @@
                             + minutes + "Min: " + seconds + "Sec </span>";            // If the count down is finished, write some text
                         if (distance < 0) {
                             clearInterval(x);
-                            document.getElementById(id).innerHTML = "EXPIRED";
-                            // $('#box'+id).removeClass('bg-green');
-                            // $('#box'+id).addClass('bg-red');
-                            // $('#draw'+id).show();
-                //                document.getElementById('box'+id).style.backgroundColor = "red";
+                            document.getElementById(id).innerHTML = "<span class='text-center text-danger'>EXPIRED</span>";
                         }
                     }, 1000);
                 }
 
                 
-
-                // $('.navbar-toggler').hover(function(){
-                //     $("navbar-toggler").css({
-                //         'border':'1px solid cyan'
-                //      });
-                //      $(".droppy").addClass("open");
-                // });
                 var selectCategory = {
                                         A: ["m-Agriculture", "m-Government", "m-Learning", "m-Entertainment"],
                                         B: ["National Database Application For Land and Distribution", "e-Agriculture, e-Farming and Food Security Solutions"],
@@ -757,7 +813,7 @@
                                             "Cloud Solutions","Online Communication Solutions","Online Tools (Any Kind of Online Service Tool)"]
                                     }
                 function changecat(value) {
-                    alert('grrr');
+                    // alert('grrr');
                     if (value.length == 0) document.getElementById("subcat").innerHTML = "<option></option>";
                     else {
                         var catOptions = "";
