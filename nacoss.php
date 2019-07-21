@@ -1,47 +1,56 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- css files -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/mdb.css">
-        <link rel="stylesheet" href="css/mdb.min.css">
+        <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="[webpath]css/mdb.css">
+        <link rel="stylesheet" href="[webpath]css/mdb.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/1.4.0/css/perfect-scrollbar.css">
 
         <!-- font -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:800|Open+Sans:600&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Asap|Open+Sans:800&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Nunito:800|Open+Sans:600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Asap|Open+Sans:800&display=swap" rel="stylesheet"> -->
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
         <!-- js files -->
-        <script src="js/jquery-3.4.1.min.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/mdb.js"></script>
-        <script src="js/mdb.min.js"></script>
-        <script src="js/popper.min.js"></script>
-    <title>Software Exhibition</title>
+        <script src="[webpath]js/jquery-3.4.1.min.js"></script>
+        <!-- <script src="js/bootstrap.js"></script> -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="[webpath]js/mdb.js"></script>
+        <script src="[webpath]js/mdb.min.js"></script>
+        <script src="[webpath]js/popper.min.js"></script>
+        <script src="[webpath]js/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+        <title>Software Exhibition</title>
 
     </head>
     
     <style>
 
+        @font-face {
+        font-family: "Futura";
+        src: url("fonts/Futura_Heavy_font.ttf");
+        }
+
+        @font-face {
+            font-family: 'Futura LT Bold';
+            src: url("fonts/FuturaLT-Bold.ttf")
+        }
         
         .firstRow{
             background-image: url('[webpath]images/firstRow.png');
             color:white;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Futura', sans-serif;
             padding-bottom: 17%;
-            /* font-family: 'Open Sans', sans-serif; */
         }
 
         .capitals{    
-            font-family: 'Open Sans', sans-serif;
-            /* font-family: 'Asap', sans-serif; */
+            font-family: 'Futura LT Bold';
         }
 
         .colo{
-            font-family: 'Nunito', sans-serif;
-            /* font-family: 'Open Sans', sans-serif; */
+            font-family: 'Futura', sans-serif;
             color: white;
         }
 
@@ -57,9 +66,7 @@
             padding-top: 10%;
             text-align: center;
             font-weight: 900;
-            font-family: 'Asap', sans-serif;
-            font-family: 'Open Sans', sans-serif;
-            
+            font-family: 'Futura', sans-serif;            
         }
 
         #roles{
@@ -70,42 +77,37 @@
         }
 
         .colora{
-            color: #5B86E5;
+            color: #36D1DC;
             font-size: 30px;
         }
 
         #signing {
             border-radius: 25px;
-            border: 2px solid #5B86E5;
             background: linear-gradient(-180deg, #36d1dc 0%, #5b86e5 100%);
             padding: 4px 40px 4px 40px;
             font-size: 25px;
             text-align: center;
             height:40px;
-            /* margin-left: 100px; */
         }
 
         .secondRow{
             padding-top: 7%;
             margin-bottom: 5%;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Futura', sans-serif;
             scroll-behavior: smooth;
-            /* font-family: 'Open Sans', sans-serif; */
         }
 
         .prow{
             font-size: 1.5em; 
-            font-weight: bold;
-            font-family: 'Nunito', sans-serif;
-            /* font-family: 'Open Sans', sans-serif; */
+            font-weight: normal;
+            font-family: 'Futura', sans-serif;
         }
 
         #thirdRow{
             background-image: url('[webpath]images/third.png');
             color:white;
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Futura', sans-serif;
             scroll-behavior: smooth;
-            /* font-family: 'Open Sans', sans-serif; */
         }
 
         #about{
@@ -121,34 +123,23 @@
         .fourthRow{
             padding-top: 7%;
             padding-bottom: 14%;
-            font-family: 'Nunito', sans-serif;
-            /* font-family: 'Open Sans', sans-serif; */
+            font-family: 'Futura', sans-serif;
         }
+
         .sixthRow{
-            padding-top: 15%;
-            padding-bottom: 20%;
-            font-family: 'Nunito', sans-serif;
+            padding-top: 5%;
+            padding-bottom: 10%;
+            font-family: 'Futura', sans-serif;
             scroll-behavior: smooth;
-            /* font-family: 'Open Sans', sans-serif; */
         }
 
         #fifthRow{
             background-image: url('[webpath]images/second.png');
             color:white;
-            font-family: 'Nunito', sans-serif;
-            /* font-family: 'Open Sans', sans-serif; */
+            font-family: 'Futura', sans-serif;
         }
 
-        ul li::before {
-            content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-            color: #5B86E5;; /* Change the color */
-            font-weight: 900; /* If you want it to be bold */
-            display: inline-block; /* Needed to add space between the bullet and the text */
-            font-size: 2.5em;
-            width: 1.5em; /* Also needed for space (tweak if needed) */
-            margin-left: -1em; /* Also needed for space (tweak if needed) */
-            
-        }
+       
 
         ul {
             list-style: none;
@@ -158,48 +149,28 @@
             display: block;
         }
 
-        #timing{
-            z-index:1; 
-            position:fixed;
-            text-align: center;
-            bottom: 1px;
-            right: 5px;
-           
-            
-        }
+        
 
         #hidden_div {
                 display: none;
             }
 
-        /* .nav-item{
-            background-color: solid black !important;
-            z-index: 1;
-        } */
+       
 
-        @media screen and (min-width: 0px) and (max-width: 900px) {
+        @media screen and (min-width: 0px) and (max-width: 1000px) {
             #mobileNav { position: absolute; z-index: 500;}  /* show it on small screens */
             #pcNav { display: none; }  /* show it on small screens */
             .navbar-toggler {  display: flex; }
             #home{ padding-top: 2%;}
-            #title{ padding-top: 15%;}
+            #title{ padding-top: 15%; }
+            .heading{ font-size: 2em!important;}
             #mobileNav .navbar{ z-index: 1; position: fixed; }
-            /* .nav-item{ margin-top: -20%; } */
-            /* .nav-item{ margin-top: 0px; } */
             #timing{
-            z-index:1; 
-            position:fixed;
-            text-align: center;
-            bottom: 3px;
-            right: 5px;
-            width:100%;
-            /* height:10px; */
+            color: white !important;
+           
+            width:100% !important;
+            text-align: right !important;
         }
-        /* .droppy li a{
-            line-height: 3px;
-            font-size: .8rem;
-            height: 36px;        
-            } */
 
             .scrolling {
             white-space: nowrap;
@@ -213,54 +184,68 @@
 
             .scrollable-menu {
                 height: auto;
-                max-height: 500px;
+                /* max-height: 500px; */
                 overflow-x: hidden;
             }
-                    /* #navbarSupportedContent15 li{
-            height: 80%;
-            } */
+            
+            .sixthRow{
+                padding-bottom : 20%;
+            }
+
+            #stylus{
+            font-size: 1em; text-align: right; position: relative;
+            position: relative !important;
+            top: -680px !important;
+            right: 1px !important;
+        }
         }
         
-            @media screen and (min-width: 901px) and (max-width: 1000px) {
+            @media screen and (min-width: 1000px) and (max-width: 1000px) {
                 .container #title { padding-top: 25%; }
-                /* #pcNav { display: none; } */
                 #prizes { padding-top: 10%; }
                 #how-to-participate { padding-top: 10%; }
                 .nav-item{ margin-top: 0px; }
-                #timing{
-                z-index:1; 
-                position:fixed;
-                text-align: center;
-                padding-left: 2%;
-                padding-right:2%;
-                /* width:100%; */
-                /* height:10px; */
-            }
+                
        
         }
 
-        @media screen and (min-width: 901px) and (max-width: 1024px) {
+        @media screen and (min-width: 1000px){
             #mobileNav { display: none; }   /* hide it elsewhere */
+            .mobiletime { display: none; }   /* hide it elsewhere */
             #pcNav { display: inline-block; }   /* hide it elsewhere */
             #timing{
-            z-index:1; 
-            position:fixed;
-            text-align: center;}
+            z-index: 500 !important; 
+            position:fixed !important;
+            text-align: right !important;
+            bottom: 1px !important;
+            right: 5px !important;
+            font-size: 2em !important; 
+            font-weight:900 !important; 
+            text-shadow: 1px 0 #888888 !important; 
+            letter-spacing:1px;
+            color: #36D1DC;
+            padding:15px !important;
         }
+
+        #stylus{
+            font-size: 1.5em !important; text-align: right !important; z-index: 1 !important; position: fixed !important;
+        }
+    }
     </style>
     <body>
         <div id="home" class="colo firstRow">
             <div id="pcNav" class="container-fluid">
                 <nav class="navbar nav-dark bg-dark text-white navbar-expand-lg fixed-top" class=".d-md-none .d-lg-block">
-                        <a class="navbar-brand" href="https://www.voguepay.com"><img src="[webpath]images/voguepayLogo-white.png" width="50%"></a>
+                        <a class="navbar-brand" href="https://www.voguepay.com"><img src="[webpath]images/voguepayLogo-white.png" width="70%"></a>
                         <div class="my-2 my-lg-0 ml-auto ">
-                            <a href="#home" class="my-2 my-sm-0 ml-3 colo scroll">Home</a>
-                            <a href="#prizes" class="my-2 my-sm-0 ml-5 colo scroll">Prizes</a>
-                            <a href="#about" class="my-2 my-sm-0 ml-5 colo scroll">About</a>
-                            <a href="#how-to-participate" class="my-2 my-sm-0 ml-5 colo scroll">How to participate</a>
-                            <a href="#benefits" class="my-2 my-sm-0 ml-5 colo scroll">Benefits</a>
-                            <a href="#contact" class="my-2 my-sm-0 ml-5 colo scroll">Contact</a>
-                            <a data-toggle="modal" data-target="#fullHeightModalRight" class="my-2 my-sm-0 ml-5 colo scroll" id="rcorners2">Register</a>
+                            <a href="#home" class="my-2 my-sm-0 ml-4 colo scroll">Home</a>
+                            <a href="#prizes" class="my-2 my-sm-0 ml-4 colo scroll">Prizes</a>
+                            <a href="#about" class="my-2 my-sm-0 ml-4 colo scroll">About Exhibition</a>
+                            <a href="#how-to-participate" class="my-2 my-sm-0 ml-4 colo scroll">How to participate</a>
+                            <a href="#benefits" class="my-2 my-sm-0 ml-4 colo scroll">Benefits</a>
+                            <a href="#gallery" class="my-2 my-sm-0 ml-4 colo scroll">Gallery</a>
+                            <a href="#contact" class="my-2 my-sm-0 ml-4 colo scroll">Contact</a>
+                            <a data-toggle="modal" data-target="#fullHeightModalRight" class="my-2 my-sm-0 ml-4 colo scroll" id="rcorners2">Register</a>
                         </div>
                 </nav>
             </div>
@@ -282,16 +267,22 @@
                         <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="https://www.voguepay.com">About Voguepay</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#prizes">Prizes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about">About Exhibition</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#how-to-participate">How to participate</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#benefits">Benefits</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -308,8 +299,11 @@
             </div>
             
             <div class="container" style="">
+                <div class="row">
+                        <!-- <div id="timing" class="rounded-pill bg-transparent mobiletime" style="font-size: 1.2em; font-weight:bold; text-shadow: 1px 0 #888888; letter-spacing:1px; color: white; padding:15px;" class="capitals"> </div> -->
+                    </div>
                     <div id="title">
-                    <h1 style="font-size: 2.5em; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: #5B86E5;" class="capitals">
+                    <h1 style="font-size: 2.5em; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: #36D1DC;" class="capitals heading">
                         CONTEMPORARY TECHNOLOGY ECOSYSTEM: </h1>
                 </div>
 
@@ -333,19 +327,18 @@
                 </div>
 
                    
-                <div class="col-sm-12" style="text-align: center">
+                <div class="col-sm-12" style="text-align: center; padding-bottom: 10%;">
                     <a data-toggle="modal" data-target="#fullHeightModalRight" style="color:white;"><span id="signing" >Register</span></a>
                 </div>
 
-                <div class="row">
-                    <!-- <div class="col-md-4 col-sm-12 offset-md-7 mr-5" id="timing" style="font-size: 180%; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: white;  background-color: black;" class="capitals"> </div> -->
-                    <div id="timing" style="font-size: 180%; font-weight:900; text-shadow: 1px 0 #888888; letter-spacing:1px; color: white;  background-color: black; padding:10px;" class="capitals"> </div>
+                <div class="row" id="stylus">
+                    <div id="timing" class="rounded-pill bg-transparent text-primary float-right" style="" class="capitals"> </div>
                 </div>
             </div>
         </div>
         <div id="prizes" class="secondRow animated fadeIn">
             <div class="container justify-content-center" id="">
-                <div style="font-size: 2.5em; font-weight:900; text-shadow: 2px 0 #888888; letter-spacing:1px; padding-bottom: 2%;" class="text-center text-dark"> 
+                <div style="font-size: 2.5em; font-weight:bold; letter-spacing:1px; padding-bottom: 2%; font-family: 'Futura';" class="text-center text-dark"> 
                     Why Register? 
                 </div>
 
@@ -360,11 +353,10 @@
                         <div class="card mx-auto" style="width:80%;" >
                                 <div class="card-body">
                             <img class="img-fuid mx-auto d-block" src="[webpath]images/second-prize.png" alt="second prize" width="150"  >
-                            <h2 class="card-title prow">N75,000</h2>
-                            
-                                
+                            <h2 class="card-title prow">N75,000</h2>                                
                             </div>
                         </div>
+                        <br>
                     </div>
                     
                     <div class="col-md-4 text-center justify-content-center">
@@ -395,9 +387,9 @@
             <div class="container text-center animated fadeIn" id="about">
                 <h3 style="font-size: 3em; font-weight:900; color:#5B86E5;" class="mt-4 mb-3" >About Software Exhibition</h3>
                 <p></p>
-                <span style="line-height: 2em; font-size: 22px; font-weight: bold;" class="">This contest is designed to showcase and unleash the entrepreneurial skills of Computer Science <br> Students in Nigeria 
-                    as part of Voguepay and estore's corporate social responsibility, in partnership <br>
-                    with National Association of Computer Science Students (NACOSS).</span>
+                <div style="line-height: 2em; font-size: 1.2em; font-size: normal; font-family: 'Futura', sans-serif;" class="">This contest is designed to showcase and unleash the entrepreneurial skills of Computer Science <br> Students in Nigeria 
+                    as part of <a href="https://www.voguepay.com" style="color:white">Voguepay</a> and <a href="https://www.estoresms.com" style="color:white">estore's</a> corporate social responsibility, in partnership <br>
+                    with National Association of Computer Science Students (NACOSS).</div>
             </div>
         
         </div>
@@ -431,6 +423,7 @@
                 </div>
             </div>
         </div>
+
         <div id="fifthRow">
             <div class="container text-center" id="benefits">
                 <h3 style="font-size: 3em; font-weight:900; color:#5B86E5;" class="mt-4 mb-3" class="capitals">Benefits</h3>
@@ -442,26 +435,137 @@
                         <div class="col-md-4 mx-auto">
                             <span style="line-height: 1.5em; font-size: 1.2em;">
                                 <ul>
-                                    <li><span class="text-center"> Earn 30% commission on <br> every transaction when <br> deployed. </span></li>
+                                    <li><span class="text-center"> <i class="fa fa-circle" style="color: #5B86E5; margin-right:10px;"></i> Earn 30% commission on <br> every transaction when <br> deployed. </span></li>
                                 </ul>
                             </span>
                         </div>
                         <div class="col-md-4 mx-auto">
                             <span style="line-height: 1.5em; font-size: 1.2em;">
                                 <ul>
-                                    <li><span class="text-center"> Listing VoguePay official <br> developer directory. </span></li>
+                                    <li><span class="text-center"> <i class="fa fa-circle" style="color: #5B86E5; margin-right:10px;"></i> Listing VoguePay official <br> developer directory. </span></li>
                                 </ul>
                             </span>
                         </div>
                         <div class="col-md-4 mx-auto">
                             <span style="line-height: 1.5em; font-size: 1.2em;">
                                 <ul>
-                                    <li><span class="text-center"> Free press coverage & other <br> media announcements. </span></li>
+                                    <li><span class="text-center"> <i class="fa fa-circle" style="color: #5B86E5; margin-right:10px;"></i> Free press coverage & other <br> media announcements. </span></li>
                                 </ul>
                             </span>
                         </div>
                     </div>
                 
+            </div>
+        </div>
+
+        <div id="gallery" class="fourthRow">
+            <div class="container">
+                    <h3 style="font-size: 3em; font-weight:900; color:black;" class="mt-4 mb-3 text-center" class="capitals">Gallery of Past Events</h3>
+                    <p></p>
+                <!-- CardOne -->
+                <div class="card" style="padding-left: 10%; padding-right: 10%; padding-top: 5%; padding-bottom: 5%; border-radius: 50px 50px 50px 50px">
+                        <!-- Card content -->
+                            <div class="row">
+                                <div class="col-md-3">
+                                        <img src="images/Third.png" class="img-fluid img-center" alt="Oso project image"><br>
+                                        <h3 class="text-center"><strong>Femi Ayodeji</strong></h3>
+                                        <div style="text-align: center"> <small class="" ><em>2018 Winner </em> </small> </div>
+                                        
+                                </div>
+                                <div class="col-md-9" style="margin-top: 5%;">
+                                    <h3 class="text-primary"> The Project </h3> <br>
+                                    <div style="margin-top:-15px;"> <h5> Oso is a personal assistant chatbot that helps in exams revision </h5> </div>
+
+                                   <small> Oso provides questions both in subjective and objective format that helps users in preparing for examinations and tests. With 
+                                    questions from various courses in the University and subjects spanning through various examination bodies including Jamb 
+                                    and Tertiary Institution Examination, the bot informs you whether your answer is correct or wrong. This project has a futuristic 
+                                    functionality to take question from a user and supply the accurate answer. </small>
+                                </div>
+                            </div>
+                            
+                    
+                </div>
+                    <!-- Card -->
+
+                <!-- CardTwo -->
+                <div class="card" style="padding-left: 10%; padding-right: 10%; padding-top: 5%; padding-bottom: 5%; border-radius: 50px 50px 50px 50px; margin-top: 5%">
+                        <!-- Card content -->
+                            <div class="row">
+                                <div class="col-md-9" style="margin-top: 5%; text-align: right">
+                                    <h3 class="text-primary"> The Project </h3> <br>
+                                    <div style="margin-top:-15px;"> <h5> An m-voting platform for students elections on campus </h5> </div>
+
+                                   <small> The first runner up position went to a team of 2 developers from Ebonyi state university. The team was led by Prince Sunday. <br> 
+                                    The solution they presented was an election voting system using an app which replaces normal voting system which is ballot
+                                    paper. It manages the entire process of collecting nomination form, screening of candidates and voting.</small>
+                                </div>
+                                <div class="col-md-3">
+                                        <img src="images/Second.png" class="img-fluid img-center" alt="Voting project image"><br>
+                                        <h5 class="text-center"><strong>Sunday & Uchenna</strong></h5>
+                                        <div style="text-align: center"> <small class="" ><em>1st runner-up </em> </small> </div>
+                                        
+                                </div>
+                            </div>
+                            
+                    
+                </div>
+                    <!-- Card -->
+
+                <!-- CardThree -->
+                <div class="card" style="padding-left: 10%; padding-right: 10%; padding-top: 5%; padding-bottom: 5%; border-radius: 50px 50px 50px 50px; margin-top: 5%">
+                        <!-- Card content -->
+                            <div class="row"> 
+                                <div class="col-md-3">
+                                        <img src="images/First.png" class="img-fluid img-center" alt="Deaf & Dumb project image"><br>
+                                        <h5 class="text-center"><strong>Owolabi Abiodun</strong></h5>
+                                        <div style="text-align: center"> <small class="" ><em>2nd runner-up </em> </small> </div>
+                                        
+                                </div>
+                                <div class="col-md-9" style="margin-top: 5%;">
+                                        <h3 class="text-primary"> The Project </h3> <br>
+                                        <div style="margin-top:-15px;"> <h5> A smart communication aid for deaf and dumb people </h5> </div>
+    
+                                       <small> A smart communication aid that uses micro controller to process gestures to text form. The project will enable persons
+                                            hearing disabilities to communicate better in the society, because it is sad for most people with these disabilities to relate and
+                                            pass information to others community.</small>
+                                </div>
+                            </div>
+                            
+                    
+                </div>
+                    <!-- Card -->
+
+                <!-- CardFour -->
+                <div class="card" style="padding-left: 10%; padding-right: 10%; padding-top: 5%; padding-bottom: 5%; border-radius: 50px 50px 50px 50px; margin-top: 5%">
+                        <!-- Card content -->
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <img src="images/Audience.png" class="img-fluid img-center" alt="audience" style="object-fit: cover; width: 100%;">
+                                </div>
+                                <div class="col-md-6">
+                                        <img src="images/HighTable.png" class="img-fluid img-center" alt="Judges" style="width: 100%;">
+                                        
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="">
+                                    <img src="images/listening.png" class="img-fluid img-center" alt="judges" style="width: 100%;">
+                                </div>
+                                <div class="col-md-6">
+                                        <img src="images/Judges2.png" class="img-fluid img-center" alt="Judges" style="width: 100%;">
+                                        
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                        <img src="images/Judges.png" class="img-fluid" alt="Judges" style="object-fit:cover cover; width: 100%;">
+                                </div>              
+                            </div>
+                                                
+                </div>
+                    <!-- Card -->
+
+               
             </div>
         </div>
         <div id="contact" class="sixthRow">
@@ -491,21 +595,19 @@
 
             <!-- Individual Modal -->
             <div class="modal fade right" id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-full-height modal-right modal-lg" role="document">
+                <div class="modal-dialog modal-full-height modal-right modal-lg" role="document" style="max-width:700px !important">
 
-                <div class="modal-content mxauto justify-content-center ml-2 mr-2 pl-5 pr-5">
-                    <div class="modal-header">
-                    <h4 class="modal-title w-100 text-primary" id="myModalLabel" style="font-size: 2em; font-weight:bold;">
-                        Software Exhibition Registration
-                    </h4>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body" style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%; font-family: 'Nunito', sans-serif;">
+                <div class="modal-content ml-2 mr-2 pl-5 pr-5">
+                    <div class="modal-body mxauto justify-content-center" style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%; font-family: 'Futura', sans-serif;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title w-100 text-center text-primary" id="myModalLabel" style="font-size: 1.5em; font-weight:bold; margin-bottom:5%;">
+                            Software Exhibition Registration
+                        </h4>
                         <form action="" method="post">
                             <div class="row">
-                                <div class="col-md-10"> 
+                                <div class="col-md-12"> 
                                     <label for="">Registration Type</label>
                                     <div class="md-form mb-5">
                                         <select class="browser-default custom-select" name="RegType" onchange="showDiv('hidden_div', this);" required>
@@ -514,7 +616,6 @@
                                         </select>
                                     </div>
                                     </div>
-                                    <div class="col-md-2"></div>
                             </div>
                                 <div id="hidden_div" class="row">
                                     <div class="col-md-8">
@@ -544,13 +645,13 @@
                                 <div class="col-md-6">
                                     <div class="md-form mb-5">
                                         <i class="fa fa-mobile prefix grey-text"></i>
-                                        <input type="number" name="paPhone" id="paPhone" class="form-control validate" placeholder="Your Phone Number" required>
+                                        <input type="text" name="paPhone" id="paPhone" class="form-control validate" placeholder="Phone Number" required pattern="[0-9]{11}" minlength="11" maxlength="12" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="md-form mb-5">
                                         <i class="fa fa-user-circle-o prefix grey-text"></i>
-                                        <input type="number" name="paAge" id="paAge" class="form-control validate" placeholder="Your Age" required>
+                                        <input type="text" name="paAge" id="paAge" class="form-control validate" placeholder="Age" pattern="[0-9]{2}"  minlength="2" maxlength="2" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -599,7 +700,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="">Select Category</label>
+                                    <label for="">Select <br> Category</label>
                                     <div class="md-form mb-5">
                                         <select class="browser-default custom-select" required onchange="changecat(this.value);" name="cat" id="cat">
                                             <option value=""></option>
@@ -657,12 +758,10 @@
                                 <textarea class="form-control" name="description" id="description" rows="5" required></textarea>
                               </div>
                             
-                            <input type="submit" name="regButton" value="Register" class="btn btn-md btn-primary float-right">
+                           <div class='text-center' style="font-size: 2em;"> <input type="submit" name="regButton" value="Register" class="btn btn-md btn-primary rounded-pill w-50"> </div> 
                         </form>
                     </div>
-                    <div class="modal-footer justify-content-center">
-                        <button type="button" class="btn btn-md btn-dark float-right" data-dismiss="modal">Close</button>
-                    </div>
+
                 </div>
                 </div>
                 </div>
@@ -679,7 +778,7 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>
-                <div class="modal-body" style="font-family: 'Nunito', sans-serif;">
+                <div class="modal-body" style="font-family: 'Futura', sans-serif;">
                     <h4 style="line-height: 1.5em; font-size: 1.2em; margin-top: 2%; margin-bottom: 3%;"> Team Name </h4> 
                     <form action="" method="post">
                         <div class="md-form">
@@ -703,7 +802,7 @@
             <div class="modal-dialog" role="document" >
             <div class="modal-content justify-content-center text-center" style="background: #8bc34a;">
                
-                <div class="modal-body" style="font-family: 'Nunito', sans-serif; background: #8bc34a; color: white; line-height: 1.5em; font-size: 1.2em;">
+                <div class="modal-body" style="font-family: 'Futura', sans-serif; background: #8bc34a; color: white; line-height: 1.5em; font-size: 1.2em;">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -723,7 +822,7 @@
             <div class="modal-dialog" role="document">
             <div class="modal-content justify-content-center text-center" style="background: #f44336; color: white; line-height: 1.5em; font-size: 1.2em;">
  
-                <div class="modal-body" style="font-family: 'Nunito', sans-serif; background: #f44336; color: white;">
+                <div class="modal-body" style="font-family: 'Futura', sans-serif; background: #f44336; color: white;">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -780,7 +879,7 @@
                     document.getElementById(divId).style.display = element.value == 'Team' ? 'block' : 'none';
                 }
 
-                window.onload = countDate("2019-08-28 00:00:00", "timing");
+                window.onload = countDate("2019-08-27 00:00:00", "timing");
                 function countDate(dateq, id) {
                     var countDownDate = new Date(dateq).getTime();        // Update the count down every 1 second
                     var x = setInterval(function () {            // Get todays date and time
@@ -825,5 +924,14 @@
                 }
                 
         </script>
+  <?php
+    $clean = ob_get_clean();
+    echo $afrisoft->cleanPage($clean, true);
+    die();
+    ?>      
+
+
     </body>
 </html>
+    
+
