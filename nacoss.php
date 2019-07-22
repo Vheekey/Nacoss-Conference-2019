@@ -42,7 +42,7 @@
             background-image: url('[webpath]images/firstRow.png');
             color:white;
             font-family: 'Futura', sans-serif;
-            padding-bottom: 17%;
+            padding-bottom: 10%;
         }
 
         .capitals{    
@@ -219,8 +219,8 @@
             text-align: right !important;
             bottom: 1px !important;
             right: 5px !important;
-            font-size: 2em !important; 
-            font-weight:900 !important; 
+            font-size: 1em !important; 
+            font-weight:bold !important; 
             text-shadow: 1px 0 #888888 !important; 
             letter-spacing:1px;
             color: #36D1DC;
@@ -879,7 +879,7 @@
                     document.getElementById(divId).style.display = element.value == 'Team' ? 'block' : 'none';
                 }
 
-                window.onload = countDate("2019-08-27 00:00:00", "timing");
+                window.onload = countDate("2019/08/27 00:00:00", "timing");
                 function countDate(dateq, id) {
                     var countDownDate = new Date(dateq).getTime();        // Update the count down every 1 second
                     var x = setInterval(function () {            // Get todays date and time
@@ -924,11 +924,7 @@
                 }
                 
         </script>
-  <?php
-    $clean = ob_get_clean();
-    echo $afrisoft->cleanPage($clean, true);
-    die();
-    ?>      
+    
 
 
     </body>
